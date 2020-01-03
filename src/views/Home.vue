@@ -7,12 +7,23 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
     HelloWorld
+  },
+  created() {
+    let modal = this.$success()
+    modal.update({
+      title: 'success',
+      content: 'loading success',
+      centered: true
+    })
+    setTimeout(() => {
+      modal.destroy()
+    }, 1500)
   }
-};
+}
 </script>

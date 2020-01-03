@@ -10,7 +10,7 @@
 
 <style lang="less">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -28,5 +28,12 @@
       color: #42b983;
     }
   }
+}
+#nprogress .bar {
+  background: rgb(137, 38, 230) !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: rgb(137, 38, 230) !important;
+  border-left-color: rgb(137, 38, 230) !important;
 }
 </style>
