@@ -5,7 +5,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-import 'components/ant-design-vue'
+import 'components/ant-design-vue/AntDesignVue'
+import 'components/v-color-picker/VColorPicker'
 
 new Vue({
   router,

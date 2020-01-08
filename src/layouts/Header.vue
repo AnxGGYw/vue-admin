@@ -1,9 +1,15 @@
 <template>
-  <div>header</div>
+  <theme-config></theme-config>
 </template>
 
 <script>
-export default {}
+import ThemeConfig from 'components/theme-config/ThemeConfig'
+
+export default {
+  components: {
+    ThemeConfig
+  }
+}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="less"></style>

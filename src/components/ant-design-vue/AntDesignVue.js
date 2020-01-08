@@ -1,11 +1,28 @@
 import Vue from 'vue'
 
-import { Button, Modal, message, notification } from 'ant-design-vue'
+import {
+  Button,
+  Modal,
+  message,
+  notification,
+  Layout,
+  Icon,
+  Tooltip,
+  Tag,
+  Menu,
+  Dropdown
+} from 'ant-design-vue'
 
 Vue.use(Button)
 Vue.use(Modal)
 Vue.use(message)
 Vue.use(notification)
+Vue.use(Layout)
+Vue.use(Icon)
+Vue.use(Tooltip)
+Vue.use(Tag)
+Vue.use(Menu)
+Vue.use(Dropdown)
 
 Vue.prototype.$confirm = Modal.confirm
 Vue.prototype.$message = message

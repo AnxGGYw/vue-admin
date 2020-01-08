@@ -10,7 +10,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/user',
-    component: () => import(/* webpackChunkName: "layout" */ '../layouts/UserLayout'),
+    component: () =>
+      import(/* webpackChunkName: "layout" */ '../layouts/UserLayout'),
     children: [
       {
         path: 'user',
@@ -19,18 +20,21 @@ const routes = [
       {
         path: '/user/register',
         name: 'register',
-        component: () => import(/* webpackChunkName: "user" */ '../views/user/UserRegister')
+        component: () =>
+          import(/* webpackChunkName: "user" */ '../views/user/UserRegister')
       },
       {
         path: '/user/login',
         name: 'login',
-        component: () => import(/* webpackChunkName: "user" */ '../views/user/UserLogin')
+        component: () =>
+          import(/* webpackChunkName: "user" */ '../views/user/UserLogin')
       }
     ]
   },
   {
     path: '/',
-    component: () => import(/* webpackChunkName: "layout" */ '../layouts/BasicLayout'),
+    component: () =>
+      import(/* webpackChunkName: "layout" */ '../layouts/BasicLayout'),
     children: [
       {
         path: '/',
@@ -39,17 +43,29 @@ const routes = [
       {
         path: '/dashboard/workplace',
         name: 'workplace',
-        component: () => import(/* webpackChunkName: "dashboard" */ '../views/dashboard/Workplace')
+        component: () =>
+          import(
+            /* webpackChunkName: "dashboard" */ '../views/dashboard/Workplace'
+          )
       },
       {
         path: '/dashboard/analysis',
         name: 'analysis',
-        component: () => import(/* webpackChunkName: "dashboard" */ '../views/dashboard/Analysis')
+        component: () =>
+          import(
+            /* webpackChunkName: "dashboard" */ '../views/dashboard/Analysis'
+          )
       }
     ]
   },
   {
-    path: '/',
+    path: '*',
+    name: '404',
+    component: () =>
+      import(/* webpackChunkName: "notFound" */ '../views/not-found/404')
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home
   },
@@ -59,7 +75,8 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
 
