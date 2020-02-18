@@ -1,7 +1,12 @@
 <template>
   <div>
     <a-layout class="components-layout-trigger">
-      <a-layout-sider :trigger="null" collapsible v-model="collapsed">
+      <a-layout-sider
+        :trigger="null"
+        collapsible
+        v-model="collapsed"
+        width="256px"
+      >
         <div class="logo" />
         <SiderMenu></SiderMenu>
       </a-layout-sider>
